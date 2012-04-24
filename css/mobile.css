@@ -1,21 +1,26 @@
-p {
-    margin-top: 10px;
-}
-
-.wrapper {
-    max-width: auto;
-    font-size: 1.25em;
-    padding-right: 10px;
-}
-
-section .number {
-    display: none;
-}
-
-section .content {
-    padding: 42px 0 30px 10px;
-}
-
-header .wrapper {
-    padding: 20px 0 20px 0;
+@media screen and (max-width: 580px) {
+  body {
+    width: 100%;
+  }
+  body > article,
+  body > div,
+  body > section {
+    min-width: 100%;
+    width: 100%;
+  }
+  .wrapper {
+    width: 100%;
+  }
+  header .name {
+    font-size: 1.75em;
+    line-height: 1.75em;
+    position: relative;
+    bottom: auto;
+  }
+  header .contact {
+    float: none;
+    display: block;
+    border: none;
+    padding-left: 0px;
+  }
 }
