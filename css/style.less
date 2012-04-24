@@ -1,0 +1,262 @@
+@import "reset.css";
+
+@obLightBlue: #0d56a6;
+@obDarkBlue: #100DA5;
+@obYellow: #ffd440;
+@obLightYellow: #ffdf73;
+
+::-moz-selection { background-color: @obDarkBlue; }
+::-webkit-selection { background-color: @obDarkBlue; }
+::selection { background-color: @obDarkBlue; }
+
+body {
+    height: 100%;
+    font-family: Cabin,Verdana,Arial,Helvetica,sans-serif;
+    font-size: 100%;
+    line-height: 100%;
+    color: #000;
+    text-shadow: 0px 1px 0px #fff;
+    background-color: #e5e5e5;
+
+	> article,
+	> div,
+	> section {
+		display: block;
+		font-size: 1.0em;
+		line-height: 1.3em;
+	}
+}
+
+a {
+    -webkit-transition: color .20s linear;
+    -moz-transition: color .20s linear;
+    transition: color .20s linear;
+
+	&:link,
+	&:visited {
+		color: @obLightBlue;
+		text-decoration: none;
+	}
+
+	&:hover,
+	&:active {
+		color: @obDarkBlue;
+	}
+
+	&:link {
+		-webkit-tap-highlight-color: #fff;
+	}
+}
+
+h1 {
+	font-weight: bold;
+}
+
+h2 {
+	font-weight: normal;
+}
+
+b { font-weight: bold; }
+em { font-style: italic; }
+
+abbr[title] {
+	border-bottom-color: #555;
+}
+
+ol, ul {
+	list-style-type: none;
+	margin-left: 2em;
+}
+
+.wrapper {
+	width: 760px;
+	margin: 0 auto;
+}
+
+dl {
+	dt, dd {
+		display: inline;
+	}
+
+	dt:after {
+		content: ': ';
+	}
+}
+
+header,
+section#education,
+section#experience,
+section#skills {
+	padding: 20px;
+	font-size: 1.2em;
+	line-height: 1.2em;
+
+	> h1 {
+		text-transform: uppercase;
+	}
+}
+
+section#education,
+section#experience {
+	border-bottom: 1px solid @obLightBlue;
+}
+
+header {
+	background-color: @obLightBlue;
+	color: #fff;
+    text-shadow: 0px 1px 0px #000;
+
+	.top {
+		display: block;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.name {
+		font-weight: bold;
+		font-size: 3.0em;
+		line-height: 1.4em;
+		position: absolute;
+		bottom: 0;
+	}
+
+	.contact {
+		float: right;
+		padding-left: 10px;
+		border-left: 5px solid @obDarkBlue;
+	}
+
+	.name, .address, .email, .tel {
+		display: block;
+	}
+
+	.address {
+		clear: both;
+	}
+
+	a {
+		&:link, &:visited {
+			color: @obYellow;
+		}
+
+		&:hover, &:active {
+			color: @obLightYellow;
+			text-decoration: underline;
+		}
+	}
+}
+
+section#experience {
+	> ol {
+		> li {
+			margin-bottom: 2em;
+		}
+	}
+
+	.company {
+		border-bottom: 1px solid @obLightBlue;
+	}
+
+	.title {
+		display: inline-block;
+		margin-bottom: 0.3em;
+		font-style: italic;
+	}
+
+
+	ul.duties {
+		clear: both;
+
+		li {
+			margin-bottom: 0.3em;
+
+			&:before {
+				content: '\2022';
+				display: inline-block;
+				margin: 0 10px 0 -20px;
+			}
+		}
+	}
+}
+
+section#education {
+	li h1 {
+		border-bottom: 1px solid @obLightBlue;
+	}
+}
+
+section#skills {
+	margin-bottom: 0;
+
+	> ol > li {
+		margin-bottom: 1em;
+	}
+
+	.electrical {
+		ul, li {
+			display: inline;
+		}
+	}
+
+	.computer {
+		h2,
+		ul ul,
+		li li {
+			display: inline;
+			margin-left: 0;
+		}
+
+		h2 {
+			font-weight: bold;
+		}
+	}
+}
+
+li.skill {
+	display: inline;
+
+	+ li.skill {
+		&:before {
+			content: ', ';
+		}
+	}
+}
+
+.title {
+	float: left;
+	clear: left;
+}
+
+.timeframe {
+	display: inline;
+	float: right;
+	color: #444;
+	font-size: 0.8em;
+}
+
+@media screen and (max-width: 580px) {
+	body {
+		width: 100%;
+		> article,
+		> div,
+		> section {
+			min-width: 100%;
+			width: 100%;
+		}
+	}
+}
+
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
+  -ms-filter: none !important; }
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
