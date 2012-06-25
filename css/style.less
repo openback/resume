@@ -74,12 +74,37 @@ ol, ul {
 }
 
 dl {
+	overflow: hidden;
+
 	dt, dd {
 		display: inline;
 	}
 
 	dt:after {
 		content: ': ';
+	}
+
+	&.works {
+		margin-left: 1em;
+
+		dt, dd {
+			display: block;
+		}
+		dt {
+			&:before {
+				content: '\2022';
+				display: inline-block;
+				width: 1em;
+			}
+
+			&:after {
+				content: '';
+			}
+		}
+
+		dd {
+			margin-left: 2em;
+		}
 	}
 }
 

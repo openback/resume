@@ -65,12 +65,33 @@ ul {
   width: 760px;
   margin: 0 auto;
 }
+dl {
+  overflow: hidden;
+}
 dl dt,
 dl dd {
   display: inline;
 }
 dl dt:after {
   content: ': ';
+}
+dl.works {
+  margin-left: 1em;
+}
+dl.works dt,
+dl.works dd {
+  display: block;
+}
+dl.works dt:before {
+  content: '\2022';
+  display: inline-block;
+  width: 1em;
+}
+dl.works dt:after {
+  content: '';
+}
+dl.works dd {
+  margin-left: 2em;
 }
 header,
 section#education,
