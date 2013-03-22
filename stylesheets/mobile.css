@@ -1,22 +1,29 @@
 @media screen and (max-width: 580px) {
+  /* line 2, ../sass/mobile.scss */
   body {
     width: 100%;
   }
+  /* line 7, ../sass/mobile.scss */
   body > article,
   body > div,
   body > section {
     min-width: 100%;
     width: 100%;
   }
+
+  /* line 13, ../sass/mobile.scss */
   .wrapper {
     width: 100%;
   }
+
+  /* line 18, ../sass/mobile.scss */
   header .name {
     font-size: 1.75em;
     line-height: 1.75em;
     position: relative;
     bottom: auto;
   }
+  /* line 25, ../sass/mobile.scss */
   header .contact {
     float: none;
     display: block;

@@ -1,0 +1,323 @@
+/* line 17, ../../../../home/openback/.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../home/openback/.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../home/openback/.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../home/openback/.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../home/openback/.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../home/openback/.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../home/openback/.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../home/openback/.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../home/openback/.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 3, ../sass/style.scss */
+::-moz-selection {
+  background-color: #100da5;
+}
+
+/* line 4, ../sass/style.scss */
+::-webkit-selection {
+  background-color: #100da5;
+}
+
+/* line 5, ../sass/style.scss */
+::selection {
+  background-color: #100da5;
+}
+
+/* line 7, ../sass/style.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 11, ../sass/style.scss */
+body {
+  height: 100%;
+  font-family: Cabin,Verdana,Arial,Helvetica,sans-serif;
+  font-size: 100%;
+  line-height: 100%;
+  color: #000;
+  text-shadow: 0px 1px 0px #fff;
+  background-color: #e5e5e5;
+}
+/* line 22, ../sass/style.scss */
+body > article,
+body > div,
+body > section {
+  display: block;
+  font-size: 1.0em;
+  line-height: 1.3em;
+}
+
+/* line 29, ../sass/style.scss */
+a {
+  -webkit-transition: color .20s linear;
+  -moz-transition: color .20s linear;
+  transition: color .20s linear;
+}
+/* line 35, ../sass/style.scss */
+a:link, a:visited {
+  color: #0d56a6;
+  text-decoration: none;
+}
+/* line 41, ../sass/style.scss */
+a:hover, a:active {
+  color: #100da5;
+}
+/* line 45, ../sass/style.scss */
+a:link {
+  -webkit-tap-highlight-color: #fff;
+}
+
+/* line 50, ../sass/style.scss */
+h1 {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* line 55, ../sass/style.scss */
+h2 {
+  font-weight: normal;
+}
+
+/* line 59, ../sass/style.scss */
+b {
+  font-weight: bold;
+}
+
+/* line 60, ../sass/style.scss */
+em {
+  font-style: italic;
+}
+
+/* line 62, ../sass/style.scss */
+abbr[title] {
+  border-bottom-color: #888;
+}
+
+/* line 66, ../sass/style.scss */
+ol, ul {
+  list-style-type: none;
+}
+
+/* line 70, ../sass/style.scss */
+.wrapper {
+  width: 1020px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+/* line 76, ../sass/style.scss */
+dl {
+  overflow: hidden;
+}
+/* line 79, ../sass/style.scss */
+dl dt, dl dd {
+  display: inline;
+}
+
+/* line 86, ../sass/style.scss */
+header,
+section.experience,
+section#skills {
+  padding: 20px;
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+/* line 91, ../sass/style.scss */
+header > h1,
+section.experience > h1,
+section#skills > h1 {
+  text-transform: uppercase;
+}
+
+/* line 96, ../sass/style.scss */
+header {
+  background-color: #0d56a6;
+  color: #fff;
+  display: block;
+  overflow: hidden;
+  text-shadow: 0px 1px 0px #000;
+}
+/* line 103, ../sass/style.scss */
+header .wrapper {
+  position: relative;
+}
+/* line 107, ../sass/style.scss */
+header .name {
+  float: right;
+  font-weight: bold;
+  font-size: 3.5em;
+  line-height: 1em;
+  margin-top: -0.5em;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+/* line 118, ../sass/style.scss */
+header .contact {
+  float: left;
+  padding-right: 10px;
+  border-right: 5px solid #100da5;
+  width: 14em;
+}
+/* line 124, ../sass/style.scss */
+header .contact dt {
+  clear: left;
+  float: left;
+  text-align: right;
+  width: 5em;
+}
+/* line 130, ../sass/style.scss */
+header .contact dt:after {
+  content: '\2219';
+  margin: 0 0.2em;
+}
+/* line 138, ../sass/style.scss */
+header a:link, header a:visited {
+  color: #ffd440;
+}
+/* line 142, ../sass/style.scss */
+header a:hover, header a:active {
+  color: #ffdf73;
+  text-decoration: underline;
+}
+
+/* line 149, ../sass/style.scss */
+section.experience {
+  display: block;
+  overflow: hidden;
+}
+/* line 153, ../sass/style.scss */
+section.experience h2 {
+  font-weight: bold;
+}
+/* line 158, ../sass/style.scss */
+section.experience > ol > li {
+  margin-bottom: 2.4em;
+}
+/* line 163, ../sass/style.scss */
+section.experience .company {
+  border-bottom: 1px solid #0d56a6;
+}
+/* line 167, ../sass/style.scss */
+section.experience dt {
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 1.1em;
+  margin-right: 0.25em;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1.3em;
+}
+/* line 177, ../sass/style.scss */
+section.experience dd {
+  margin-right: 1em;
+}
+/* line 183, ../sass/style.scss */
+section.experience dl *:nth-child(4n) :after {
+  content: "\A";
+  white-space: pre;
+}
+
+/* line 191, ../sass/style.scss */
+section#skills {
+  width: 14em;
+  float: left;
+  text-align: right;
+}
+/* line 196, ../sass/style.scss */
+section#skills h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 201, ../sass/style.scss */
+section#skills ul {
+  margin: 0 0 1.25em 0;
+}
+/* line 205, ../sass/style.scss */
+section#skills li {
+  display: block;
+}
+
+/* line 211, ../sass/style.scss */
+.timeframe {
+  display: inline;
+  float: right;
+  color: #444;
+  font-size: 0.8em;
+}
+
+/* line 219, ../sass/style.scss */
+.technologies h3 {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+/* line 224, ../sass/style.scss */
+.technologies ul {
+  display: inline;
+  margin-left: 0;
+}
+/* line 228, ../sass/style.scss */
+.technologies ul li {
+  display: inline;
+}
+/* line 232, ../sass/style.scss */
+.technologies ul li + li:before {
+  content: ', ';
+}

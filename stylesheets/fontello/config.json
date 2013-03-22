@@ -1,0 +1,44 @@
+{
+  "name": "",
+  "glyphs": [
+    {
+      "search": [
+        "googleplay"
+      ],
+      "code": 104,
+      "uid": "909f99f11c6b6551bf757b6e809f98f3",
+      "css": "googleplay",
+      "orig_css": "googleplay",
+      "orig_code": 104,
+      "src": "zocial",
+      "from": 104
+    },
+    {
+      "search": [
+        "github",
+        "social",
+        "logo"
+      ],
+      "code": 62208,
+      "uid": "d94334f23acba022bfd68e49d76b31bb",
+      "css": "github",
+      "orig_css": "github",
+      "orig_code": 62208,
+      "src": "entypo",
+      "from": 62208
+    },
+    {
+      "search": [
+        "link",
+        "url"
+      ],
+      "code": 128279,
+      "uid": "815503841e980c848f55e0271deacead",
+      "css": "link",
+      "orig_css": "link",
+      "orig_code": 128279,
+      "src": "entypo",
+      "from": 128279
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/typography";
+@import "blueprint";
+// $icons: sprite-map("icons/*.png");
+
+$obLightBlue: #0d56a6;
+$obDarkBlue: #100DA5;
+$obYellow: #ffd440;
+$obLightYellow: #ffdf73;
+
+@mixin easyclearfix {
+	display: inline-block;
+
+	&:after {
+		content: " ";
+		display: block;
+		height: 0;
+		clear: both;
+		overflow: hidden;
+		visibility: hidden;
+	}
+
+	& {
+		display: block;
+	}
+}
+
+@mixin sprite-replace-text ($sprite, $img-name){
+	@include hide-text;
+	background: sprite($sprite, $img-name) no-repeat;
+	display: inline-block;
+	width: image-width(sprite-file($sprite, $img-name));
+	height: image-height(sprite-file($sprite, $img-name));
+}
+
+@mixin inline-box() {
+	display: inline-block;
+	min-height: 1em;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1;
+	*display: inline;
+	_height: 1em;
+}

@@ -1,13 +1,8 @@
-@import "reset.css";
+@import "base";
 
-@obLightBlue: #0d56a6;
-@obDarkBlue: #100DA5;
-@obYellow: #ffd440;
-@obLightYellow: #ffdf73;
-
-::-moz-selection { background-color: @obDarkBlue; }
-::-webkit-selection { background-color: @obDarkBlue; }
-::selection { background-color: @obDarkBlue; }
+::-moz-selection { background-color: $obDarkBlue; }
+::-webkit-selection { background-color: $obDarkBlue; }
+::selection { background-color: $obDarkBlue; }
 
 body {
     height: 100%;
@@ -16,14 +11,14 @@ body {
     line-height: 100%;
     color: #000;
     text-shadow: 0px 1px 0px #fff;
-    background-color: #e5e5e5;
+    background-color: white;
 
 	> article,
 	> div,
 	> section {
 		display: block;
-		font-size: 1.0em;
-		line-height: 1.3em;
+		font-size: 0.8em;
+		line-height: 1.1em;
 	}
 }
 
@@ -34,13 +29,13 @@ a {
 
 	&:link,
 	&:visited {
-		color: @obLightBlue;
+		color: $obLightBlue;
 		text-decoration: none;
 	}
 
 	&:hover,
 	&:active {
-		color: @obDarkBlue;
+		color: $obDarkBlue;
 	}
 
 	&:link {
@@ -60,7 +55,7 @@ b { font-weight: bold; }
 em { font-style: italic; }
 
 abbr[title] {
-	border-bottom-color: #555;
+	border-bottom-color: black;
 }
 
 ol, ul {
@@ -69,7 +64,7 @@ ol, ul {
 }
 
 .wrapper {
-	width: 760px;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -123,13 +118,12 @@ section#skills {
 
 section#education,
 section#experience {
-	border-bottom: 1px solid @obLightBlue;
+	border-bottom: 1px solid $obLightBlue;
 }
 
 header {
-	background-color: @obLightBlue;
-	color: #fff;
-    text-shadow: 0px 1px 0px #000;
+	color: black;
+    text-shadow: 0px 1px 0px black;
 
 	.top {
 		display: block;
@@ -138,17 +132,18 @@ header {
 	}
 
 	.name {
+		float: left;
 		font-weight: bold;
-		font-size: 3.0em;
+		font-size: 2.0em;
 		line-height: 1.4em;
-		position: absolute;
-		bottom: 0;
+		position: relative;
+		bottom: auto;
 	}
 
 	.contact {
+		border-left-width: 0;
 		float: right;
-		padding-left: 10px;
-		border-left: 5px solid @obDarkBlue;
+		padding-left: 1em;
 	}
 
 	.name, .address, .email, .tel {
@@ -161,11 +156,11 @@ header {
 
 	a {
 		&:link, &:visited {
-			color: @obYellow;
+			color: $obYellow;
 		}
 
 		&:hover, &:active {
-			color: @obLightYellow;
+			color: $obLightYellow;
 			text-decoration: underline;
 		}
 	}
@@ -179,7 +174,7 @@ section#experience {
 	}
 
 	.company {
-		border-bottom: 1px solid @obLightBlue;
+		border-bottom: 1px solid $obLightBlue;
 	}
 
 	.title {
@@ -206,7 +201,7 @@ section#experience {
 
 section#education {
 	li h1 {
-		border-bottom: 1px solid @obLightBlue;
+		border-bottom: 1px solid $obLightBlue;
 	}
 }
 
@@ -258,3 +253,18 @@ li.skill {
 	color: #444;
 	font-size: 0.8em;
 }
+
+* { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
+-ms-filter: none !important; }
+a, a:visited { color: #444 !important; text-decoration: underline; }
+section {
+  a[href]:after { content: " (" attr(href) ")"; }
+}
+abbr[title]:after { content: " (" attr(title) ")"; }
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+pre, blockquote { page-break-inside: avoid; }
+thead { display: table-header-group; }
+tr, img { page-break-inside: avoid; }
+@page { margin: 0.5cm; }
+p, h2, h3 { orphans: 3; widows: 3; }
+h2, h3{ page-break-after: avoid; }

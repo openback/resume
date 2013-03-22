@@ -1,0 +1,238 @@
+@import "base";
+
+::-moz-selection { background-color: $obDarkBlue; }
+::-webkit-selection { background-color: $obDarkBlue; }
+::selection { background-color: $obDarkBlue; }
+
+* {
+	@include box-sizing(border-box);
+}
+
+body {
+    height: 100%;
+    font-family: Cabin,Verdana,Arial,Helvetica,sans-serif;
+    font-size: 100%;
+    line-height: 100%;
+    color: #000;
+    text-shadow: 0px 1px 0px #fff;
+    background-color: #e5e5e5;
+
+	> article,
+	> div,
+	> section {
+		display: block;
+		font-size: 1.0em;
+		line-height: 1.3em;
+	}
+}
+
+a {
+    -webkit-transition: color .20s linear;
+    -moz-transition: color .20s linear;
+    transition: color .20s linear;
+
+	&:link,
+	&:visited {
+		color: $obLightBlue;
+		text-decoration: none;
+	}
+
+	&:hover,
+	&:active {
+		color: $obDarkBlue;
+	}
+
+	&:link {
+		-webkit-tap-highlight-color: #fff;
+	}
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+h2 {
+	font-weight: normal;
+}
+
+b { font-weight: bold; }
+em { font-style: italic; }
+
+abbr[title] {
+	border-bottom-color: #888;
+}
+
+ol, ul {
+	list-style-type: none;
+}
+
+.wrapper {
+	width: 1020px;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+dl {
+	overflow: hidden;
+
+	dt, dd {
+		display: inline;
+	}
+}
+
+header,
+section.experience,
+section#skills {
+	padding: 20px;
+	font-size: 1.2em;
+	line-height: 1.2em;
+
+	> h1 {
+		text-transform: uppercase;
+	}
+}
+
+header {
+	background-color: $obLightBlue;
+	color: #fff;
+	display: block;
+	overflow: hidden;
+    text-shadow: 0px 1px 0px #000;
+
+	.wrapper {
+		position: relative;
+	}
+
+	.name {
+		float: right;
+		font-weight: bold;
+		font-size: 3.5em;
+		line-height: 1em;
+		margin-top: -0.5em;
+		position: absolute;
+		right: 0;
+		top: 50%;
+	}
+
+	.contact {
+		float: left;
+		padding-right: 10px;
+		border-right: 5px solid $obDarkBlue;
+		width: 14em;
+
+		dt {
+			clear: left;
+			float: left;
+			text-align: right;
+			width: 5em;
+
+			&:after {
+				content: '\2219';
+				margin: 0 0.2em;
+			}
+		}
+	}
+
+	a {
+		&:link, &:visited {
+			color: $obYellow;
+		}
+
+		&:hover, &:active {
+			color: $obLightYellow;
+			text-decoration: underline;
+		}
+	}
+}
+
+section.experience {
+	display: block;
+	overflow: hidden;
+
+	h2 {
+		font-weight: bold;
+	}
+
+	> ol {
+		> li {
+			margin-bottom: 2.4em;
+		}
+	}
+
+	.company {
+		border-bottom: 1px solid $obLightBlue;
+	}
+
+	dt {
+		display: inline-block;
+		font-size: 0.8em;
+		line-height: 1.1em;
+		margin-right: 0.25em;
+		overflow: hidden;
+		white-space: nowrap;
+		width: 1.3em;
+	}
+
+	dd {
+		margin-right: 1em;
+	}
+
+	dl {
+		*:nth-child(4n) {
+			:after {
+				content: "\A";
+				white-space: pre;
+			}
+		}
+	}
+}
+
+section#skills {
+	width: 14em;
+	float: left;
+	text-align: right;
+
+	h2 {
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	ul {
+		margin: 0 0 1.25em 0;
+	}
+
+	li {
+		display: block;
+		// text-align: right;
+	}
+}
+
+.timeframe {
+	display: inline;
+	float: right;
+	color: #444;
+	font-size: 0.8em;
+}
+
+.technologies {
+	h3 {
+		display: inline-block;
+		margin-right: 0.5em;
+	}
+
+	ul {
+		display: inline;
+		margin-left: 0;
+
+		li {
+			display: inline;
+
+			+ li {
+				&:before {
+					content: ', ';
+				}
+			}
+		}
+	}
+}
