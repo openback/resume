@@ -13,16 +13,16 @@ body {
     font-family: Cabin,Verdana,Arial,Helvetica,sans-serif;
     font-size: 100%;
     line-height: 100%;
-    color: #000;
-    text-shadow: 0px 1px 0px #fff;
-    background-color: #e5e5e5;
+    color: $textColor;
+    text-shadow: 0px 1px 0px #ccc;
+    background-color: $backgroundColor;
 
 	> article,
 	> div,
 	> section {
 		display: block;
 		font-size: 1.0em;
-		line-height: 1.3em;
+		line-height: 1.75em;
 	}
 }
 
@@ -33,13 +33,14 @@ a {
 
 	&:link,
 	&:visited {
-		color: $obLightBlue;
+		color: black;
+		border-bottom: 1px dotted $obLightBlue;
 		text-decoration: none;
 	}
 
 	&:hover,
 	&:active {
-		color: $obDarkBlue;
+		color: $obLightBlue;
 	}
 
 	&:link {
@@ -70,23 +71,24 @@ ol, ul {
 .wrapper {
 	width: 1020px;
 	margin: 0 auto;
-	overflow: auto;
+	overflow: hidden;
 }
 
 dl {
-	overflow: hidden;
-
 	dt, dd {
 		display: inline;
 	}
 }
 
+#outline-title {
+	display: none;
+}
+
 header,
-section.experience,
-section#skills {
-	padding: 20px;
+#experience,
+#skills {
+	padding: 1em;
 	font-size: 1.2em;
-	line-height: 1.2em;
 
 	> h1 {
 		text-transform: uppercase;
@@ -94,37 +96,26 @@ section#skills {
 }
 
 header {
-	background-color: $obLightBlue;
-	color: #fff;
 	display: block;
 	overflow: hidden;
-    text-shadow: 0px 1px 0px #000;
+	padding: 0;
 
 	.wrapper {
 		position: relative;
 	}
 
-	.name {
-		float: right;
-		font-weight: bold;
-		font-size: 3.5em;
-		line-height: 1em;
-		margin-top: -0.5em;
-		position: absolute;
-		right: 0;
-		top: 50%;
-	}
-
 	.contact {
+		background-color: $leftColumnBackground;
+		color: $leftColumnText;
+		display: block;
 		float: left;
-		padding-right: 10px;
-		border-right: 5px solid $obDarkBlue;
+		margin-right: 1em;
+		padding: 1em 1em 0 0;
+		text-align: right;
+		text-shadow: none;
 		width: 14em;
 
 		dt {
-			clear: left;
-			float: left;
-			text-align: right;
 			width: 5em;
 
 			&:after {
@@ -134,19 +125,39 @@ header {
 		}
 	}
 
-	a {
-		&:link, &:visited {
-			color: $obYellow;
-		}
+	.name {
+		position:absolute;
+		font-weight: bold;
+		font-size: 3.5em;
+		line-height: 2.5em;
+		margin-left: 4.25em;
+	}
 
-		&:hover, &:active {
-			color: $obLightYellow;
-			text-decoration: underline;
-		}
+}
+
+#skills {
+	background-color: $leftColumnBackground;
+	color: $leftColumnText;
+	float: left;
+	padding-bottom: 0;
+	text-align: right;
+	width: 14em;
+
+	h2 {
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	ul {
+		margin: 0 0 1.25em 0;
+	}
+
+	li {
+		display: block;
 	}
 }
 
-section.experience {
+#experience {
 	display: block;
 	overflow: hidden;
 
@@ -167,7 +178,6 @@ section.experience {
 	dt {
 		display: inline-block;
 		font-size: 0.8em;
-		line-height: 1.1em;
 		margin-right: 0.25em;
 		overflow: hidden;
 		white-space: nowrap;
@@ -180,31 +190,11 @@ section.experience {
 
 	dl {
 		*:nth-child(4n) {
-			:after {
+			&:after {
 				content: "\A";
 				white-space: pre;
 			}
 		}
-	}
-}
-
-section#skills {
-	width: 14em;
-	float: left;
-	text-align: right;
-
-	h2 {
-		font-weight: bold;
-		text-transform: uppercase;
-	}
-
-	ul {
-		margin: 0 0 1.25em 0;
-	}
-
-	li {
-		display: block;
-		// text-align: right;
 	}
 }
 
@@ -218,6 +208,7 @@ section#skills {
 .technologies {
 	h3 {
 		display: inline-block;
+		float: left;
 		margin-right: 0.5em;
 	}
 
@@ -227,6 +218,7 @@ section#skills {
 
 		li {
 			display: inline;
+			float: left;
 
 			+ li {
 				&:before {
@@ -235,4 +227,21 @@ section#skills {
 			}
 		}
 	}
+
 }
+
+.duties {
+	display: block;
+	clear: left;
+
+	h3 {
+		float: left;
+		margin-right: 0.5em;
+	}
+
+	p {
+		display: block;
+		overflow: hidden;
+	}
+}
+

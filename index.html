@@ -7,31 +7,31 @@
 		<meta name="author" content="Timothy Caraballo">
 		<meta name="keywords" content="openback">
 		<meta name="viewport" content="width=device-width">
+		<link rel="shortcut icon" href="images/favicon.png">
 		<link href='http://fonts.googleapis.com/css?family=Cabin:400,700,400italic' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="stylesheets/fontello/css/fontello.css?v=2">
 		<link rel="stylesheet" href="stylesheets/style.css?v=2">
 		<link rel="stylesheet" href="stylesheets/mobile.css?v=2">
 		<link rel="stylesheet" href="stylesheets/print.css?v=2" media="print">
+		<script src="javascripts/respond.min.js?v=1" type="text/javascript"></script>
 		<!--[if lt IE 9]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 	</head>
 	<body>
+		<h1 id="outline-title">Timothy Caraballo</h1>
 		<div id="page">
 			<header>
-				<address class="wrapper">
+				<nav class="wrapper">
 					<h1 class="name">Timothy Caraballo</h1>
-					<div class="contact">
-						<dl>
-							<dt>GitHub</dt><dd><a href="http://github.com/openback">openback</a></dd>
-							<dt>LinkedIn</dt><dd><a href="http://www.linkedin.com/in/timothycaraballo">timothycaraballo</a></dd>
-							<dt>Twitter</dt><dd><a href="http://twitter.com/openback">openback</a></dd>
-							<dt>Instagram</dt><dd><a href="http://instagram.com/openback">openback</a></dd>
-							<dt>Email</dt><dd><a class="email" href="mailto:tim@pixelpod.net">tim@pixelpod.net</a></dd>
-						</dl>
-
-					</div>
-				</address>
+					<dl class="contact">
+						<dt>GitHub</dt><dd><a href="http://github.com/openback">openback</a></dd>
+						<dt>LinkedIn</dt><dd><a href="http://www.linkedin.com/in/timothycaraballo">timothycaraballo</a></dd>
+						<dt>Twitter</dt><dd><a href="http://twitter.com/openback">openback</a></dd>
+						<dt>Instagram</dt><dd><a href="http://instagram.com/openback">openback</a></dd>
+						<dt>Email</dt><dd><a class="email" href="mailto:tim@pixelpod.net">tim@pixelpod.net</a></dd>
+					</dl>
+				</nav>
 			</header>
 			<div class="wrapper">
 				<section id="skills">
@@ -39,7 +39,7 @@
 					<ul>
 						<li>
 							<h2>Languages/Libraries</h2>
-							<ul>
+							<ul class="skills">
 								<li class="skill">JavaScript</li>
 								<li class="skill">CoffeeScript</li>
 								<li class="skill">jQuery</li>
@@ -54,8 +54,8 @@
 						</li>
 						<li>
 							<h2>Web Technologies</h2>
-							<ul>
-								<li class="skill"><abbr title="HyperText Markup Language">HTML5</abbr></li>
+							<ul class="skills">
+								<li class="skill"><abbr title="HyperText Markup Language">HTML</abbr>5</li>
 								<li class="skill"><abbr title="Cascading Style Sheets">CSS3</abbr></li>
 								<li class="skill"><abbr title="World Wide Web Consortium">W3C</abbr> Validation</li>
 								<li class="skill"><abbr title="Asynchronous JavaScript and XML">AJAX</abbr></li>
@@ -67,13 +67,13 @@
 						</li>
 						<li>
 							<h2>Databases</h2>
-							<ul>
+							<ul class="skills">
 								<li class="skill">MySQL</li>
 								<li class="skill">MongoDB</li>
 							</ul>
 						</li>
 						<li><h2>Operating Systems</h2>
-							<ul>
+							<ul class="skills">
 								<li class="skill">Debian, Ubuntu, and Fedora Linux</li>
 								<li class="skill">Windows</li>
 								<li class="skill">Android</li>
@@ -81,11 +81,11 @@
 						</li>
 					</ul>
 				</section>
-				<section class="experience">
+				<section id="experience">
 					<h1>Selected Works</h1>
 					<ol>
 						<li>
-							<div class="timeframe"><time class="started" datetime="2006-02-01">2/2011</time> - <time class="ended" datetime="2006-02-01">2/2011</time></div>
+							<div class="timeframe"><time class="started" datetime="2012-06-01">6/2012</time> &ndash; <time class="ended" datetime="2012-10-01">10/2012</time></div>
 							<h2 class="client">minusbaby</h2>
 							<dl>
 								<dt class="icon-link">Site</dt><dd><a href="http://minusbaby.com">minusbaby.com</a></dd>
@@ -101,13 +101,22 @@
 									<li>MySQL</li>
 								</ul>
 							</div>
-							<p class="duties">
-								Custom CMS for music and image collections and blog built with CakePHP.
-							</p>
+							<div class="duties">
+								<h3>Duties:</h3>
+								<p>
+									Custom CMS for music and image collections and blog built with CakePHP.
+								</p>
+							</div>
 						</li>
 						<li>
-							<div class="timeframe"><time class="started" datetime="2006-02-01">2/2011</time> - <time class="ended" datetime="2006-02-01">2/2011</time></div>
-							<h2 class="client">Monobomb</h2>
+							<div class="timeframe"><time class="started" datetime="2011-10-01">10/2011</time> &ndash; <time class="ended" datetime="2012-07-01">7/2012</time></div>
+							<h2 class="client">monobomb records</h2>
+							<dl>
+								<dt class="icon-link">Site</dt><dd><a href="http://monobomb.com">monobomb.com</a></dd>
+								<dt class="icon-github">Source</dt><dd><a href="https://github.com/openback/monobomb.com">monobomb.com on Github</a></dd>
+								<dt class="icon-link">Site</dt><dd><a href="http://monobomb.com">shop.monobomb.com</a></dd>
+								<dt class="icon-github">Source</dt><dd><a href="https://github.com/openback/monobomb.com">shop.monobomb.com on Github</a></dd>
+							</dl>
 							<div class="technologies">
 								<h3>Technologies:</h3>
 								<ul>
@@ -115,21 +124,21 @@
 									<li>Big Cartel</li>
 								</ul>
 							</div>
-							<dl>
-								<dt class="icon-link">Site</dt><dd><a href="http://monobomb.com">monobomb.com</a></dd>
-								<dt class="icon-github">Source</dt><dd><a href="https://github.com/openback/monobomb.com">monobomb.com on Github</a></dd>
-								<dt class="icon-link">Site</dt><dd><a href="http://monobomb.com">shop.monobomb.com</a></dd>
-								<dt class="icon-github">Source</dt><dd><a href="https://github.com/openback/monobomb.com">shop.monobomb.com on Github</a></dd>
-							</dl>
-							<p class="duties">
-								Created a single page site with a responsive design and a corresponding
-								<a href="http://twig.sensiolabs.org/">Twig</a>-based shop template for use with the
-								<a href="http://bigcartel.com">Big Cartel</a> e-commerce system.
-							</p>
+							<div class="duties">
+								<h3>Duties:</h3>
+								<p>
+									Created a single page site with a responsive design and later, a corresponding
+									<a href="http://twig.sensiolabs.org/">Twig</a>-based shop template for use with the
+									<a href="http://bigcartel.com">Big Cartel</a> e-commerce system.
+								</p>
+							</div>
 						</li>
 						<li>
-							<div class="timeframe"><time class="started" datetime="2006-02-01">2/2011</time> - <time class="ended" datetime="2006-02-01">2/2011</time></div>
+							<div class="timeframe"><time class="started" datetime="2011-11-01">11/2011</time> &ndash; <time class="ended" datetime="2012-02-01">2/2012</time></div>
 							<h2 class="client">The Norman Mailer Center</h2>
+							<dl>
+								<dt class="icon-link">Site</dt><dd><a href="http://nmcenter.org">nmcenter.org</a></dd>
+							</dl>
 							<div class="technologies">
 								<h3>Technologies:</h3>
 								<ul>
@@ -141,18 +150,18 @@
 									<li>CKEditor</li>
 								</ul>
 							</div>
-							<dl>
-								<dt class="icon-link">Site</dt><dd><a href="http://nmcenter.org">nmcenter.org</a></dd>
-							</dl>
-							<p class="duties">
-								Created a CakePHP-based <abbr title="Content Management System">CMS</abbr> with a
-								hierarchical category system, image galleries, in-place editing with CKEditor, and many
-								different custom post types tailored to the client's specifications. Also automatically
-								generated Google maps based off of editable office locations.
-							</p>
+							<div class="duties">
+								<h3>Duties:</h3>
+								<p>
+									Created a CakePHP-based <abbr title="Content Management System">CMS</abbr> with a
+									hierarchical category system, image galleries, in-place editing with CKEditor, and many
+									different custom post types tailored to the client's specifications. Also automatically
+									generated Google maps based off of editable office locations.
+								</p>
+							</div>
 						</li>
 						<li>
-							<div class="timeframe"><time class="started" datetime="2010-03-01">3/2010</time> - <time class="ended" datetime="2010-04-01">4/2010</time></div>
+							<div class="timeframe"><time class="started" datetime="2010-03-01">3/2010</time> &ndash; <time class="ended" datetime="2010-04-01">4/2010</time></div>
 							<h2 class="client">Type Fresh</h2>
 							<dl>
 								<dt class="icon-googleplay">Site</dt><dd><a href="https://play.google.com/store/apps/details?id=net.pixelpod.typefresh">Type Fresh on Google Play</a></dd>
@@ -165,15 +174,21 @@
 									<li>Android SDK</li>
 								</ul>
 							</div>
-							<p class="duties">
-								Created an Android application that allowed rooted users to change their system fonts using
-								Linux shell commands. It has had almost 200,000 installs and has a 4 star review on the
-								Google Play Store.
-							</p>
+							<div class="duties">
+								<h3>Duties:</h3>
+								<p>
+									Created an Android application that allowed rooted users to change their system fonts using
+									Linux shell commands. It has had almost 200,000 installs and has a 4 star review on the
+									Google Play Store.
+								</p>
+							</div>
 						</li>
 						<li>
-							<div class="timeframe"><time class="started" datetime="2008-10-01">10/2008</time> - <time class="ended" datetime="2008-12-01">12/2008</time></div>
+							<div class="timeframe"><time class="started" datetime="2008-10-01">10/2008</time> &ndash; <time class="ended" datetime="2008-12-01">12/2008</time></div>
 							<h2 class="client">Blip Festival 2008</h2>
+							<dl>
+								<dt class="icon-link">Site</dt><dd><a href="http://blipfestival.com/2008">blipfestival.com/2008</a></dd>
+							</dl>
 							<div class="technologies">
 								<h3>Technologies:</h3>
 								<ul>
@@ -183,16 +198,19 @@
 									<li>MySQL</li>
 								</ul>
 							</div>
-							<dl>
-								<dt class="icon-link">Site</dt><dd><a href="http://blipfestival.com/2008">blipfestival.com/2008</a></dd>
-							</dl>
-							<p class="duties">
-								A yearly music festival site utilizing PHP &amp; MySQL for editable artist information and events. (No longer maintained)
-							</p>
+							<div class="duties">
+								<h3>Duties:</h3>
+								<p>
+									A yearly music festival site utilizing PHP &amp; MySQL for editable artist information and events. (No longer maintained)
+								</p>
+							</div>
 						</li>
 						<li>
-							<div class="timeframe"><time class="started" datetime="2006-02-01">2/2011</time> - <time class="ended" datetime="2006-02-01">2/2011</time></div>
+							<div class="timeframe"><time class="started" datetime="2007-11-01">11/2007</time> &ndash; <time class="ended" datetime="2011-12-01">12/2011</time></div>
 							<h2 class="client">8bitpeoples</h2>
+							<dl>
+								<dt class="icon-link">Site</dt><dd><a href="http://8bitpeoples.com">8bitpeoples.com</a></dd>
+							</dl>
 							<div class="technologies">
 								<h3>Technologies:</h3>
 								<ul>
@@ -202,13 +220,13 @@
 									<li>PayPal</li>
 								</ul>
 							</div>
-							<dl>
-								<dt class="icon-link">Site</dt><dd><a href="http://8bitpeoples.com">8bitpeoples.com</a></dd>
-							</dl>
-							<p class="duties">
-								Converted a previously static music label's website to a database-driven one built utilizing
-								Ruby on Rails.
-							</p>
+							<div class="duties">
+								<h3>Duties:</h3>
+								<p>
+									Converted a previously static music label's website to a database-driven one built utilizing
+									Ruby on Rails.
+								</p>
+							</div>
 						</li>
 					</ol>
 				</section>
@@ -217,7 +235,7 @@
 					<h1>Other experience</h1>
 					<ol>
 						<li class="experience">
-							<div class="timeframe"><time class="started" datetime="2011-05-09">5/2009</time> - <span class="ended">present</span></div>
+							<div class="timeframe"><time class="started" datetime="2011-05-09">5/2009</time> &ndash; <span class="ended">present</span></div>
 							<h1 class="company">Finnish Cultural Institute</h1>
 							<span class="title">Art Installer</span>
 							<p class="duties">

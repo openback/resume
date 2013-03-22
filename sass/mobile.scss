@@ -10,25 +10,66 @@
 		}
 	}
 
+	h1 {
+		text-align: center;
+		margin-bottom: 1em;
+	}
 	.wrapper {
 		width: 100%;
 	}
 
 	header {
+		.name,
+		.contact {
+			float: none;
+			text-align: center;
+		}
+
 		.name {
+			position: relative;
 			font-size: 1.75em;
 			line-height: 1.75em;
-			position: relative;
-			bottom: auto;
+			margin: 0;
 		}
 
 		.contact {
-			float: none;
 			display: block;
 			border: none;
 			padding-left: 0px;
+			width: 100%;
+
+			dd {
+				&:after {
+					content: "\A";
+					white-space: pre;
+				}
+			}
 		}
 	}
 
+	#skills {
+		border-bottom: 1px solid #bbb;
+		float: none;
+		text-align: left;
+		width: 100%;
+
+		ul {
+			overflow: hidden;
+		}
+
+		ul.skills {
+			li {
+				display: inline;
+				float: left;
+
+				+ li {
+					&:before {
+						content: '\2219';
+						margin: 0 0.25em;
+					}
+				}
+			}
+		}
+	}
 }
 

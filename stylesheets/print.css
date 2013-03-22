@@ -63,273 +63,230 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 3, ../sass/print.scss */
+/* line 3, ../sass/style.scss */
 ::-moz-selection {
   background-color: #100da5;
 }
 
-/* line 4, ../sass/print.scss */
+/* line 4, ../sass/style.scss */
 ::-webkit-selection {
   background-color: #100da5;
 }
 
-/* line 5, ../sass/print.scss */
+/* line 5, ../sass/style.scss */
 ::selection {
   background-color: #100da5;
 }
 
-/* line 7, ../sass/print.scss */
+/* line 7, ../sass/style.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 11, ../sass/style.scss */
 body {
   height: 100%;
   font-family: Cabin,Verdana,Arial,Helvetica,sans-serif;
   font-size: 100%;
   line-height: 100%;
-  color: #000;
-  text-shadow: 0px 1px 0px #fff;
-  background-color: white;
+  color: black;
+  text-shadow: 0px 1px 0px #ccc;
+  background-color: #f0f0f0;
 }
-/* line 18, ../sass/print.scss */
+/* line 22, ../sass/style.scss */
 body > article,
 body > div,
 body > section {
   display: block;
-  font-size: 0.8em;
-  line-height: 1.1em;
+  font-size: 1.0em;
+  line-height: 1.75em;
 }
 
-/* line 25, ../sass/print.scss */
+/* line 29, ../sass/style.scss */
 a {
   -webkit-transition: color .20s linear;
   -moz-transition: color .20s linear;
   transition: color .20s linear;
 }
-/* line 31, ../sass/print.scss */
+/* line 35, ../sass/style.scss */
 a:link, a:visited {
-  color: #0d56a6;
+  color: black;
+  border-bottom: 1px dotted #0d56a6;
   text-decoration: none;
 }
-/* line 37, ../sass/print.scss */
+/* line 42, ../sass/style.scss */
 a:hover, a:active {
-  color: #100da5;
+  color: #0d56a6;
 }
-/* line 41, ../sass/print.scss */
+/* line 46, ../sass/style.scss */
 a:link {
   -webkit-tap-highlight-color: #fff;
 }
 
-/* line 46, ../sass/print.scss */
+/* line 51, ../sass/style.scss */
 h1 {
   font-weight: bold;
+  font-size: 1.2em;
 }
 
-/* line 50, ../sass/print.scss */
+/* line 56, ../sass/style.scss */
 h2 {
   font-weight: normal;
 }
 
-/* line 54, ../sass/print.scss */
+/* line 60, ../sass/style.scss */
 b {
   font-weight: bold;
 }
 
-/* line 55, ../sass/print.scss */
+/* line 61, ../sass/style.scss */
 em {
   font-style: italic;
 }
 
-/* line 57, ../sass/print.scss */
+/* line 63, ../sass/style.scss */
 abbr[title] {
-  border-bottom-color: black;
+  border-bottom-color: #888;
 }
 
-/* line 61, ../sass/print.scss */
+/* line 67, ../sass/style.scss */
 ol, ul {
   list-style-type: none;
-  margin-left: 2em;
 }
 
-/* line 66, ../sass/print.scss */
+/* line 71, ../sass/style.scss */
 .wrapper {
-  width: 100%;
+  width: 1020px;
   margin: 0 auto;
-}
-
-/* line 71, ../sass/print.scss */
-dl {
   overflow: hidden;
 }
-/* line 74, ../sass/print.scss */
+
+/* line 78, ../sass/style.scss */
 dl dt, dl dd {
   display: inline;
 }
-/* line 78, ../sass/print.scss */
-dl dt:after {
-  content: ': ';
-}
-/* line 82, ../sass/print.scss */
-dl.works {
-  margin-left: 1em;
-}
-/* line 85, ../sass/print.scss */
-dl.works dt, dl.works dd {
-  display: block;
-}
-/* line 89, ../sass/print.scss */
-dl.works dt:before {
-  content: '\2022';
-  display: inline-block;
-  width: 1em;
-}
-/* line 95, ../sass/print.scss */
-dl.works dt:after {
-  content: '';
-}
-/* line 100, ../sass/print.scss */
-dl.works dd {
-  margin-left: 2em;
+
+/* line 83, ../sass/style.scss */
+#outline-title {
+  display: none;
 }
 
-/* line 109, ../sass/print.scss */
+/* line 89, ../sass/style.scss */
 header,
-section#education,
-section#experience,
-section#skills {
-  padding: 20px;
+#experience,
+#skills {
+  padding: 1em;
   font-size: 1.2em;
-  line-height: 1.2em;
 }
-/* line 114, ../sass/print.scss */
+/* line 93, ../sass/style.scss */
 header > h1,
-section#education > h1,
-section#experience > h1,
-section#skills > h1 {
+#experience > h1,
+#skills > h1 {
   text-transform: uppercase;
 }
 
-/* line 120, ../sass/print.scss */
-section#education,
-section#experience {
-  border-bottom: 1px solid #0d56a6;
-}
-
-/* line 124, ../sass/print.scss */
+/* line 98, ../sass/style.scss */
 header {
-  color: black;
-  text-shadow: 0px 1px 0px black;
-}
-/* line 128, ../sass/print.scss */
-header .top {
   display: block;
   overflow: hidden;
+  padding: 0;
+}
+/* line 103, ../sass/style.scss */
+header .wrapper {
   position: relative;
 }
-/* line 134, ../sass/print.scss */
-header .name {
-  float: left;
-  font-weight: bold;
-  font-size: 2.0em;
-  line-height: 1.4em;
-  position: relative;
-  bottom: auto;
-}
-/* line 143, ../sass/print.scss */
+/* line 107, ../sass/style.scss */
 header .contact {
-  border-left-width: 0;
-  float: right;
-  padding-left: 1em;
+  background-color: #f0f0f0;
+  color: black;
+  display: block;
+  float: left;
+  margin-right: 1em;
+  padding: 1em 1em 0 0;
+  text-align: right;
+  text-shadow: none;
+  width: 14em;
 }
-/* line 149, ../sass/print.scss */
-header .name, header .address, header .email, header .tel {
+/* line 118, ../sass/style.scss */
+header .contact dt {
+  width: 5em;
+}
+/* line 121, ../sass/style.scss */
+header .contact dt:after {
+  content: '\2219';
+  margin: 0 0.2em;
+}
+/* line 128, ../sass/style.scss */
+header .name {
+  position: absolute;
+  font-weight: bold;
+  font-size: 3.5em;
+  line-height: 2.5em;
+  margin-left: 4.25em;
+}
+
+/* line 138, ../sass/style.scss */
+#skills {
+  background-color: #f0f0f0;
+  color: black;
+  float: left;
+  padding-bottom: 0;
+  text-align: right;
+  width: 14em;
+}
+/* line 146, ../sass/style.scss */
+#skills h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 151, ../sass/style.scss */
+#skills ul {
+  margin: 0 0 1.25em 0;
+}
+/* line 155, ../sass/style.scss */
+#skills li {
   display: block;
 }
-/* line 153, ../sass/print.scss */
-header .address {
-  clear: both;
-}
-/* line 158, ../sass/print.scss */
-header a:link, header a:visited {
-  color: #ffd440;
-}
-/* line 162, ../sass/print.scss */
-header a:hover, header a:active {
-  color: #ffdf73;
-  text-decoration: underline;
-}
 
-/* line 171, ../sass/print.scss */
-section#experience > ol > li {
-  margin-bottom: 2em;
+/* line 160, ../sass/style.scss */
+#experience {
+  display: block;
+  overflow: hidden;
 }
-/* line 176, ../sass/print.scss */
-section#experience .company {
-  border-bottom: 1px solid #0d56a6;
-}
-/* line 180, ../sass/print.scss */
-section#experience .title {
-  display: inline-block;
-  margin-bottom: 0.3em;
-  font-style: italic;
-}
-/* line 187, ../sass/print.scss */
-section#experience ul.duties {
-  clear: both;
-}
-/* line 190, ../sass/print.scss */
-section#experience ul.duties li {
-  margin-bottom: 0.3em;
-}
-/* line 193, ../sass/print.scss */
-section#experience ul.duties li:before {
-  content: '\2022';
-  display: inline-block;
-  margin: 0 10px 0 -20px;
-}
-
-/* line 203, ../sass/print.scss */
-section#education li h1 {
-  border-bottom: 1px solid #0d56a6;
-}
-
-/* line 208, ../sass/print.scss */
-section#skills {
-  margin-bottom: 0;
-}
-/* line 211, ../sass/print.scss */
-section#skills > ol > li {
-  margin-bottom: 1em;
-}
-/* line 216, ../sass/print.scss */
-section#skills .electrical ul, section#skills .electrical li {
-  display: inline;
-}
-/* line 224, ../sass/print.scss */
-section#skills .computer h2,
-section#skills .computer ul ul,
-section#skills .computer li li {
-  display: inline;
-  margin-left: 0;
-}
-/* line 229, ../sass/print.scss */
-section#skills .computer h2 {
+/* line 164, ../sass/style.scss */
+#experience h2 {
   font-weight: bold;
 }
-
-/* line 235, ../sass/print.scss */
-li.skill {
-  display: inline;
+/* line 169, ../sass/style.scss */
+#experience > ol > li {
+  margin-bottom: 2.4em;
 }
-/* line 239, ../sass/print.scss */
-li.skill + li.skill:before {
-  content: ', ';
+/* line 174, ../sass/style.scss */
+#experience .company {
+  border-bottom: 1px solid #0d56a6;
+}
+/* line 178, ../sass/style.scss */
+#experience dt {
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 0.25em;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1.3em;
+}
+/* line 187, ../sass/style.scss */
+#experience dd {
+  margin-right: 1em;
+}
+/* line 193, ../sass/style.scss */
+#experience dl *:nth-child(4n):after {
+  content: "\A";
+  white-space: pre;
 }
 
-/* line 245, ../sass/print.scss */
-.title {
-  float: left;
-  clear: left;
-}
-
-/* line 250, ../sass/print.scss */
+/* line 201, ../sass/style.scss */
 .timeframe {
   display: inline;
   float: right;
@@ -337,62 +294,88 @@ li.skill + li.skill:before {
   font-size: 0.8em;
 }
 
-/* line 257, ../sass/print.scss */
+/* line 209, ../sass/style.scss */
+.technologies h3 {
+  display: inline-block;
+  float: left;
+  margin-right: 0.5em;
+}
+/* line 215, ../sass/style.scss */
+.technologies ul {
+  display: inline;
+  margin-left: 0;
+}
+/* line 219, ../sass/style.scss */
+.technologies ul li {
+  display: inline;
+  float: left;
+}
+/* line 224, ../sass/style.scss */
+.technologies ul li + li:before {
+  content: ', ';
+}
+
+/* line 233, ../sass/style.scss */
+.duties {
+  display: block;
+  clear: left;
+}
+/* line 237, ../sass/style.scss */
+.duties h3 {
+  float: left;
+  margin-right: 0.5em;
+}
+/* line 242, ../sass/style.scss */
+.duties p {
+  display: block;
+  overflow: hidden;
+}
+
+/* line 3, ../sass/print.scss */
 * {
   background: transparent !important;
   color: black !important;
   text-shadow: none !important;
-  filter: none !important;
-  -ms-filter: none !important;
 }
 
-/* line 259, ../sass/print.scss */
+/* line 9, ../sass/print.scss */
+body {
+  background-color: white;
+  color: black;
+  font-size: 90%;
+  line-height: 90%;
+}
+/* line 17, ../sass/print.scss */
+body > article,
+body > div,
+body > section {
+  line-height: 1.5em;
+}
+
+/* line 22, ../sass/print.scss */
 a, a:visited {
+  border-bottom-width: 0 !important;
   color: #444 !important;
   text-decoration: underline;
 }
 
-/* line 261, ../sass/print.scss */
-section a[href]:after {
-  content: " (" attr(href) ")";
+/* line 29, ../sass/print.scss */
+#experience a[href]:after {
+  font-size: 80%;
+  content: " <" attr(href) ">" !important;
+}
+/* line 35, ../sass/print.scss */
+#experience dd:after {
+  content: "\A";
+  white-space: pre;
 }
 
-/* line 263, ../sass/print.scss */
-abbr[title]:after {
-  content: " (" attr(title) ")";
-}
-
-/* line 264, ../sass/print.scss */
-.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
-  content: "";
-}
-
-/* line 265, ../sass/print.scss */
-pre, blockquote {
-  page-break-inside: avoid;
-}
-
-/* line 266, ../sass/print.scss */
-thead {
-  display: table-header-group;
-}
-
-/* line 267, ../sass/print.scss */
-tr, img {
-  page-break-inside: avoid;
-}
-
+/*
 @page {
-  margin: 0.5cm;
+	margin: 0.5cm;
 }
-
-/* line 269, ../sass/print.scss */
-p, h2, h3 {
-  orphans: 3;
-  widows: 3;
-}
-
-/* line 270, ../sass/print.scss */
-h2, h3 {
+*/
+/* line 48, ../sass/print.scss */
+h2 {
   page-break-after: avoid;
 }

@@ -4,10 +4,15 @@
 @import "blueprint";
 // $icons: sprite-map("icons/*.png");
 
+$obLightestBlue: #86AAD2;
 $obLightBlue: #0d56a6;
 $obDarkBlue: #100DA5;
 $obYellow: #ffd440;
 $obLightYellow: #ffdf73;
+$textColor:  black;
+$backgroundColor: #f0f0f0;
+$leftColumnBackground: #f0f0f0;
+$leftColumnText: black;
 
 @mixin easyclearfix {
 	display: inline-block;
