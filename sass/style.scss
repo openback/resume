@@ -1,8 +1,16 @@
 @import "base";
 
-::-moz-selection { background-color: $obDarkBlue; }
-::-webkit-selection { background-color: $obDarkBlue; }
-::selection { background-color: $obDarkBlue; }
+::-moz-selection {
+	background-color: $obLightestBlue;
+}
+
+::-webkit-selection {
+	background-color: $obLightestBlue;
+}
+
+::selection {
+	background-color: $obLightestBlue;
+}
 
 * {
 	@include box-sizing(border-box);
