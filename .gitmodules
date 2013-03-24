@@ -1,0 +1,3 @@
+[submodule "javascripts/html5shiv"]
+	path = javascripts/html5shiv
+	url = https://github.com/aFarkas/html5shiv
