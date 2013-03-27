@@ -22,7 +22,7 @@ body {
     font-size: 100%;
     line-height: 100%;
     color: $textColor;
-    text-shadow: 0px 1px 0px #ccc;
+    text-shadow: 0px 1px 0px #fff;
     background-color: $backgroundColor;
 
 	> article,
@@ -44,15 +44,12 @@ a {
 		color: black;
 		border-bottom: 1px dotted $obLightBlue;
 		text-decoration: none;
+		-webkit-tap-highlight-color: #fff;
 	}
 
 	&:hover,
 	&:active {
 		color: $obLightBlue;
-	}
-
-	&:link {
-		-webkit-tap-highlight-color: #fff;
 	}
 }
 
@@ -130,6 +127,10 @@ header {
 				content: '\2219';
 				margin: 0 0.2em;
 			}
+		}
+
+		a {
+			@include link-colors($leftColumnText, $obLightBlue, $obLightBlue, $leftColumnText, $obLightBlue);
 		}
 	}
 
