@@ -21,6 +21,7 @@
 	header {
 		.name,
 		.contact {
+			color: black;
 			float: none;
 			text-align: center;
 		}
@@ -44,11 +45,18 @@
 					white-space: pre;
 				}
 			}
+
+			a:link,
+			a:active,
+			a:focus {
+				 color: black;
+			}
 		}
 	}
 
 	#skills {
 		border-bottom: 1px solid #bbb;
+		color: black;
 		float: none;
 		text-align: left;
 		width: 100%;
