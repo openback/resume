@@ -1,0 +1,23 @@
+@import "style";
+
+* {
+	background: transparent !important;
+	color: black !important;
+	text-shadow: none !important;
+}
+
+body {
+	font-size: 90%;
+}
+
+a, a:visited {
+	border-bottom-color: black !important;
+}
+
+h2 {
+	page-break-after: avoid;
+}
+
+#experience > ol > li {
+	margin-bottom: 2em;
+}
