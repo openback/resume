@@ -12,5 +12,6 @@ end
 guard 'livereload' do
   watch(%r{js/.+\.js})
   watch(%r{.+\.php})
+  watch(%r{.+\.html})
   watch(%r{.+\.css})
 end
