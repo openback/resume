@@ -82,6 +82,7 @@ ol, ul {
 dl {
 	dt, dd {
 		display: inline;
+		vertical-align: bottom;
 	}
 }
 
@@ -164,6 +165,11 @@ header {
 	li {
 		display: block;
 	}
+
+	a {
+		@include link-colors($leftColumnText, $obLightBlue, $obLightBlue, $leftColumnText, $obLightBlue);
+		border-bottom: none;
+	}
 }
 
 #experience {
@@ -226,7 +232,7 @@ header {
 			float: left;
 
 			+ li {
-				&:before {
+				&:after {
 					content: ', ';
 				}
 			}
