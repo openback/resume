@@ -232,7 +232,7 @@ header {
 			float: left;
 
 			+ li {
-				&:after {
+				&:before {
 					content: ', ';
 				}
 			}
