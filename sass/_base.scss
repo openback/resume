@@ -15,37 +15,37 @@ $leftColumnBackground: #f0f0f0;
 $leftColumnText: #3f3f3f;
 
 @mixin easyclearfix {
-	display: inline-block;
+  display: inline-block;
 
-	&:after {
-		content: " ";
-		display: block;
-		height: 0;
-		clear: both;
-		overflow: hidden;
-		visibility: hidden;
-	}
+  &:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+  }
 
-	& {
-		display: block;
-	}
+  & {
+    display: block;
+  }
 }
 
 @mixin sprite-replace-text ($sprite, $img-name){
-	@include hide-text;
-	background: sprite($sprite, $img-name) no-repeat;
-	display: inline-block;
-	width: image-width(sprite-file($sprite, $img-name));
-	height: image-height(sprite-file($sprite, $img-name));
+  @include hide-text;
+  background: sprite($sprite, $img-name) no-repeat;
+  display: inline-block;
+  width: image-width(sprite-file($sprite, $img-name));
+  height: image-height(sprite-file($sprite, $img-name));
 }
 
 @mixin inline-box() {
-	display: inline-block;
-	min-height: 1em;
-	display: -moz-inline-stack;
-	display: inline-block;
-	vertical-align: top;
-	zoom: 1;
-	*display: inline;
-	_height: 1em;
+  display: inline-block;
+  min-height: 1em;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+  _height: 1em;
 }
