@@ -1,7 +1,7 @@
-@import "compass/reset";
-@import "compass/css3";
-@import "compass/typography";
-@import "blueprint";
+// @import "compass/reset";
+// @import "compass/css3";
+// @import "compass/typography";
+// @import "blueprint";
 // $icons: sprite-map("icons/*.png");
 
 $obLightestBlue: #86AAD2;
@@ -13,6 +13,21 @@ $textColor:  black;
 $backgroundColor: #f0f0f0;
 $leftColumnBackground: #f0f0f0;
 $leftColumnText: #3f3f3f;
+
+@mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
+  color: $normal;
+  @if $visited {
+    &:visited {
+      color: $visited; } }
+  @if $focus {
+    &:focus {
+      color: $focus; } }
+  @if $hover {
+    &:hover {
+      color: $hover; } }
+  @if $active {
+    &:active {
+      color: $active; } } }
 
 @mixin easyclearfix {
   display: inline-block;
