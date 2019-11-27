@@ -1,44 +1,44 @@
 @import "style";
 
 * {
-	background: transparent !important;
-	color: black !important;
-	text-shadow: none !important;
+  background: transparent !important;
+  color: black !important;
+  text-shadow: none !important;
 }
 
 body {
-	background-color: white;
-	color: black;
-	font-size: 90%;
-	line-height: 90%;
+  background-color: white;
+  color: black;
+  font-size: 90%;
+  line-height: 90%;
 
-	> article,
-	> div,
-	> section {
-		line-height: 1.5em;
-	}
+  > article,
+  > div,
+  > section {
+    line-height: 1.5em;
+  }
 }
 
 a, a:visited {
-	border-bottom-width: 0 !important;
-	color: #444 !important;
-	text-decoration: underline;
+  border-bottom-width: 0 !important;
+  color: #444 !important;
+  text-decoration: underline;
 }
 
 #experience {
-	a[href]:after {
-		font-size: 80%;
-		content: " <" attr(href) ">" !important;
-	}
+  a[href]:after {
+    font-size: 80%;
+    content: " <" attr(href) ">" !important;
+  }
 
-	dd {
-		&:after {
-			content: "\A";
-			white-space: pre;
-		}
-	}
+  dd {
+    &:after {
+      content: "\A";
+      white-space: pre;
+    }
+  }
 }
 
 h2 {
-	page-break-after: avoid;
+  page-break-after: avoid;
 }

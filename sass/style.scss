@@ -1,258 +1,281 @@
+@import "reset";
 @import "base";
 
 ::-moz-selection {
-	background-color: $obLightestBlue;
+  background-color: $obLightestBlue;
 }
 
 ::-webkit-selection {
-	background-color: $obLightestBlue;
+  background-color: $obLightestBlue;
 }
 
 ::selection {
-	background-color: $obLightestBlue;
+  background-color: $obLightestBlue;
 }
 
 * {
-	@include box-sizing(border-box);
+  box-sizing: border-box;
 }
 
 body {
-    height: 100%;
-    font-family: Cabin,Verdana,Arial,Helvetica,sans-serif;
-    font-size: 100%;
-    line-height: 100%;
-    color: $textColor;
-    text-shadow: 0px 1px 0px #fff;
-    background-color: $backgroundColor;
+  height: 100%;
+  font-family: Cabin,Verdana,Arial,Helvetica,sans-serif;
+  font-size: 100%;
+  line-height: 100%;
+  color: $textColor;
+  text-shadow: 0px 1px 0px #fff;
+  background-color: $backgroundColor;
 
-	> article,
-	> div,
-	> section {
-		display: block;
-		font-size: 1.0em;
-		line-height: 1.75em;
-	}
+  > article,
+  > div,
+  > section {
+    display: block;
+    font-size: 1.0em;
+    line-height: 1.75em;
+  }
 }
 
 a {
-    -webkit-transition: color .20s linear;
-    -moz-transition: color .20s linear;
-    transition: color .20s linear;
+  -webkit-transition: color .20s linear;
+  -moz-transition: color .20s linear;
+  transition: color .20s linear;
 
-	&:link,
-	&:visited {
-		color: black;
-		border-bottom: 1px dotted $obLightBlue;
-		text-decoration: none;
-		-webkit-tap-highlight-color: #fff;
-	}
+  &:link,
+  &:visited {
+    color: black;
+    border-bottom: 1px dotted $obLightBlue;
+    text-decoration: none;
+    -webkit-tap-highlight-color: #fff;
+  }
 
-	&:hover,
-	&:active {
-		color: $obLightBlue;
-	}
+  &:hover,
+  &:active {
+    color: $obLightBlue;
+  }
+}
+
+dd {
+  margin-left: 0;
 }
 
 h1 {
-	font-weight: bold;
-	font-size: 1.2em;
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
 h2 {
-	font-weight: normal;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 b { font-weight: bold; }
 em { font-style: italic; }
 
 abbr[title] {
-	border-bottom-color: #888;
+  border-bottom-color: #888;
 }
 
 ol, ul {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 .wrapper {
-	width: 1020px;
-	margin: 0 auto;
-	overflow: hidden;
+  width: 1020px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 dl {
-	dt, dd {
-		display: inline;
-		vertical-align: bottom;
-	}
+  dt, dd {
+    display: inline;
+    vertical-align: bottom;
+  }
+}
+
+p {
+  margin-top: 0;
+}
+
+h1 {
+}
+
+h2 {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 #outline-title {
-	display: none;
+  display: none;
 }
 
 header,
 #experience,
 #skills {
-	padding: 1em;
-	font-size: 1.2em;
+  padding: 1em;
+  font-size: 1.2em;
 
-	> h1 {
-		text-transform: uppercase;
-	}
+  > h1 {
+    text-transform: uppercase;
+  }
 }
 
 header {
-	display: block;
-	overflow: hidden;
-	padding: 0;
+  display: block;
+  overflow: hidden;
+  padding: 0;
 
-	.wrapper {
-		position: relative;
-	}
+  .wrapper {
+    position: relative;
+  }
 
-	.contact {
-		background-color: $leftColumnBackground;
-		color: $leftColumnText;
-		display: block;
-		float: left;
-		margin-right: 1em;
-		padding: 1em 1em 0 0;
-		text-align: right;
-		text-shadow: none;
-		width: 14em;
+  .contact {
+    background-color: $leftColumnBackground;
+    color: $leftColumnText;
+    display: block;
+    float: left;
+    margin-right: 1em;
+    padding: 1em 1em 0 0;
+    text-align: right;
+    text-shadow: none;
+    width: 14em;
 
-		dt {
-			width: 5em;
+    dt {
+      width: 5em;
 
-			&:after {
-				content: '\2219';
-				margin: 0 0.2em;
-			}
-		}
+      &:after {
+        content: '\2219';
+        margin: 0 0.2em;
+      }
+    }
 
-		a {
-			@include link-colors($leftColumnText, $obLightBlue, $obLightBlue, $leftColumnText, $obLightBlue);
-		}
-	}
+    a {
+      @include link-colors($leftColumnText, $obLightBlue, $obLightBlue, $leftColumnText, $obLightBlue);
+    }
+  }
 
-	.name {
-		position:absolute;
-		font-weight: bold;
-		font-size: 3.5em;
-		line-height: 2.5em;
-		margin-left: 4.25em;
-	}
+  .name {
+    position:absolute;
+    font-weight: bold;
+    font-size: 3.5em;
+    line-height: 2.5em;
+    margin-left: 4.25em;
+  }
 
 }
 
 #skills {
-	background-color: $leftColumnBackground;
-	color: $leftColumnText;
-	float: left;
-	padding-bottom: 0;
-	text-align: right;
-	width: 14em;
+  background-color: $leftColumnBackground;
+  color: $leftColumnText;
+  float: left;
+  padding-bottom: 0;
+  text-align: right;
+  width: 14em;
 
-	h2 {
-		font-weight: bold;
-		text-transform: uppercase;
-	}
+  h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 
-	ul {
-		margin: 0 0 1.25em 0;
-	}
+  ul {
+    margin: 0 0 1.25em 0;
+  }
 
-	li {
-		display: block;
-	}
+  li {
+    display: block;
+  }
 
-	a {
-		@include link-colors($leftColumnText, $obLightBlue, $obLightBlue, $leftColumnText, $obLightBlue);
-		border-bottom: none;
-	}
+  a {
+    @include link-colors($leftColumnText, $obLightBlue, $obLightBlue, $leftColumnText, $obLightBlue);
+    border-bottom: none;
+  }
 }
 
 #experience {
-	display: block;
-	overflow: hidden;
+  display: block;
+  overflow: hidden;
 
-	h2 {
-		font-weight: bold;
-	}
+  h2 {
+    font-weight: bold;
+  }
 
-	> ol {
-		> li {
-			margin-bottom: 2.4em;
-		}
-	}
+  > ol {
+    > li {
+      margin-bottom: 2.4em;
+    }
+  }
 
-	dt {
-		display: inline-block;
-		font-size: 0.8em;
-		margin-right: 0.25em;
-		overflow: hidden;
-		white-space: nowrap;
-		width: 1.3em;
-	}
+  dt {
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 0.25em;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 1.3em;
+  }
 
-	dd {
-		margin-right: 1em;
-	}
+  dd {
+    margin-right: 1em;
+  }
 
-	dl {
-		*:nth-child(4n) {
-			&:after {
-				content: "\A";
-				white-space: pre;
-			}
-		}
-	}
+  dl {
+    *:nth-child(4n) {
+      &:after {
+        content: "\A";
+        white-space: pre;
+      }
+    }
+  }
 }
 
 .timeframe {
-	display: inline;
-	float: right;
-	color: #444;
-	font-size: 0.8em;
+  display: inline;
+  float: right;
+  color: #444;
+  font-size: 0.8em;
 }
 
 .technologies {
-	h3 {
-		display: inline-block;
-		float: left;
-		margin-right: 0.5em;
-	}
+  h3 {
+    display: inline-block;
+    float: left;
+    margin-right: 0.5em;
+  }
 
-	ul {
-		display: inline;
-		margin-left: 0;
+  ul {
+    display: inline;
+    margin-left: 0;
 
-		li {
-			display: inline;
-			float: left;
+    li {
+      display: inline;
+      float: left;
 
-			+ li {
-				&:before {
-					content: ', ';
-				}
-			}
-		}
-	}
+      + li {
+        &:before {
+          content: ', ';
+        }
+      }
+    }
+  }
 
 }
 
 .duties {
-	display: block;
-	clear: left;
+  display: block;
+  clear: left;
 
-	h3 {
-		float: left;
-		margin-right: 0.5em;
-	}
+  h3 {
+    float: left;
+    margin-right: 0.5em;
+  }
 
-	p {
-		display: block;
-		overflow: hidden;
-	}
+  p {
+    display: block;
+    overflow: hidden;
+  }
 }
 

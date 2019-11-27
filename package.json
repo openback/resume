@@ -1,0 +1,23 @@
+{
+  "name": "openback.net",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "watch": "sass --watch sass:stylesheets",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openback/resume.git"
+  },
+  "author": "openback@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/openback/resume/issues"
+  },
+  "homepage": "https://github.com/openback/resume#readme",
+  "devDependencies": {
+    "sass": "^1.23.7"
+  }
+}
