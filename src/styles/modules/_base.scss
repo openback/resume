@@ -1,0 +1,42 @@
+@import 'variables';
+
+@mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
+  color: $normal;
+  @if $visited {
+    &:visited { color: $visited; } 
+  }
+  @if $focus {
+    &:focus { color: $focus; } 
+  }
+  @if $hover {
+    &:hover { color: $hover; } 
+  }
+  @if $active {
+    &:active { color: $active; } 
+  } 
+}
+
+@mixin sprite-replace-text ($sprite, $img-name){
+  @include hide-text;
+  background: sprite($sprite, $img-name) no-repeat;
+  display: inline-block;
+  width: image-width(sprite-file($sprite, $img-name));
+  height: image-height(sprite-file($sprite, $img-name));
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  color: $primaryColor;
+  font-family: $primaryFont;
+  background: $backgroundColor;
+}
+
+.center {
+  text-align: center;
+}
