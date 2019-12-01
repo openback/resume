@@ -1,29 +1,5 @@
 @import 'variables';
 
-@mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
-  color: $normal;
-  @if $visited {
-    &:visited { color: $visited; } 
-  }
-  @if $focus {
-    &:focus { color: $focus; } 
-  }
-  @if $hover {
-    &:hover { color: $hover; } 
-  }
-  @if $active {
-    &:active { color: $active; } 
-  } 
-}
-
-@mixin sprite-replace-text ($sprite, $img-name){
-  @include hide-text;
-  background: sprite($sprite, $img-name) no-repeat;
-  display: inline-block;
-  width: image-width(sprite-file($sprite, $img-name));
-  height: image-height(sprite-file($sprite, $img-name));
-}
-
 *,
 *:before,
 *:after {
@@ -31,12 +7,22 @@
 }
 
 html {
+  background-color: $historyBackgroundColor;
   box-sizing: border-box;
   color: $primaryColor;
   font-family: $primaryFont;
-  background: $backgroundColor;
+  font-size: 1.0em;
+  line-height: 2em;
 }
 
-.center {
-  text-align: center;
+a {
+  transition: all .20s linear;
+
+  &:link {
+    text-decoration: none;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  clear: left;
 }
