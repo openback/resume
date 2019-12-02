@@ -2,6 +2,10 @@
 @import 'modules/svg';
 
 
+.print-only {
+  display: none;
+}
+
 abbr[title] {
   border-bottom-color: #888;
 }
@@ -48,6 +52,10 @@ ul, ol {
       }
     }
   }
+}
+
+.name {
+  font-size: 2.5rem;
 }
 
 #details-pane, #history-pane {
@@ -111,10 +119,6 @@ ul, ol {
 #history-pane {
   margin: $blockMargin;
   text-shadow: 0px 1px 0px #fff;
-
-  .name {
-    font-size: 2.5rem;
-  }
 
   .name,
   .client,
@@ -226,7 +230,7 @@ ul, ol {
     }
   }
 }
-@media screen and (min-device-width: 500px) {
+@media screen and (min-device-width: 500px), print {
   html {
     line-height: 2.25em;
   }
@@ -306,3 +310,105 @@ ul, ol {
   }
 }
 
+@media print {
+  .print-only {
+    display: block !important;
+  }
+
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    background-color: white;
+    display: block;
+    font-size: 90%;
+    line-height: 1rem;
+  }
+
+  a, a:visited {
+    border-bottom-color: black !important;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+    line-height: 1rem !important;
+  }
+
+  h2, h3 {
+    font-size: 1rem;
+  }
+
+  a, a:visited {
+    border-bottom-width: 0 !important;
+    color: #444 !important;
+    text-decoration: underline;
+  }
+
+  #details-pane {
+    font-size: 90%;
+
+    h2 {
+      font-size: 90%;
+      margin-top: 0;
+    }
+
+    .wrapper {
+      float: none;
+      max-width: none;
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+
+    .details {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .skills {
+      font-size: 90%;
+    }
+  }
+
+  #history-pane {
+    margin-top: 0;
+    max-width: 100%;
+
+    .client {
+      margin-bottom: 1rem;
+    }
+
+    .name {
+      display: none;
+    }
+
+    .client-links {
+      li {
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+      a {
+        font-size: 80%;
+        display: block;
+        padding: 0;
+        &[href]:after {
+        visibility: visible;
+          text-transform: none;
+          content: " <" attr(href) ">" !important;
+        }
+      }
+    }
+  }
+
+  #work-history {
+    > li {
+      padding-bottom: 0;
+
+      &:before, &:after {
+        display: none;
+      }
+    }
+  }
+}
