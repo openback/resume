@@ -22,6 +22,10 @@ dl {
     display: grid;
     vertical-align: bottom;
   }
+
+  dt {
+    margin-right: 1rem;
+  }
 }
 
 ul, ol {
@@ -69,22 +73,24 @@ ul, ol {
   letter-spacing: 0.1em;
 
   .wrapper {
-    display: flex;
-    flex-direction: column;
     float: right;
     padding: $blockMargin;
   }
+    .details {
+      display: flex;
+      flex-direction: column;
+    }
 
   a {
     &:link,
     &:visited {
       -webkit-tap-highlight-color: #fff;
-      color: $mutedColor;
+      color: $obLightestBlue;
     }
 
     &:hover,
     &:active {
-      color: $obLightestBlue;
+      text-decoration: underline;
     }
   }
 
@@ -136,6 +142,7 @@ ul, ol {
 
   .timeframe {
     float: right;
+    font-family: 'Nanum Gothic Coding', monospace;
     font-size: 0.9rem;
   }
 
@@ -151,7 +158,9 @@ ul, ol {
       border-radius: 4px;
       color: #fff;
       display: inline-block;
-      padding: 0.1rem 1.5rem;
+      font-family: 'Nanum Gothic Coding', monospace;
+      line-height: 2.25rem;
+      padding: 0rem 1rem;
       text-shadow: none;
       text-transform: uppercase;
 
@@ -188,7 +197,8 @@ ul, ol {
 
 }
 
-#work-history {
+#work-history,
+#additional-projects {
   > li {
     display: block;
     padding-bottom: 3rem;
@@ -266,8 +276,12 @@ ul, ol {
   #details-pane {
     .wrapper {
       max-width: 24em;
+    }
+
+    .details {
       flex-direction: column-reverse;
     }
+
      nav {
        h2 {
          display: none;
@@ -287,7 +301,7 @@ ul, ol {
     }
   }
 }
-@media screen and (min-device-width: 781px) and (max-device-width: 1000px) {
+@media screen and (min-device-width: 781px) and (max-device-width: 1200px) {
   #details-pane {
     .contact {
       display: block;
@@ -315,6 +329,10 @@ ul, ol {
     display: block !important;
   }
 
+  .not-print {
+    display: none !important;
+  }
+
   * {
     background: transparent !important;
     color: black !important;
@@ -324,8 +342,8 @@ ul, ol {
   body {
     background-color: white;
     display: block;
-    font-size: 90%;
-    line-height: 1rem;
+    font-size: 80%;
+    line-height: 1.5rem;
   }
 
   a, a:visited {
@@ -335,6 +353,12 @@ ul, ol {
   h1, h2, h3 {
     page-break-after: avoid;
     line-height: 1rem !important;
+  }
+
+  #work-history {
+    > li {
+        page-break-inside: avoid;
+    }
   }
 
   h2, h3 {
@@ -369,6 +393,7 @@ ul, ol {
 
     .skills {
       font-size: 90%;
+      margin-right: 3rem;
     }
   }
 
@@ -389,14 +414,17 @@ ul, ol {
         display: block;
         margin-bottom: 0.5rem;
       }
+
       a {
-        font-size: 80%;
         display: block;
+        font-size: 80%;
+        line-height: 1rem;
         padding: 0;
+
         &[href]:after {
         visibility: visible;
-          text-transform: none;
           content: " <" attr(href) ">" !important;
+          text-transform: none;
         }
       }
     }
@@ -404,7 +432,7 @@ ul, ol {
 
   #work-history {
     > li {
-      padding-bottom: 0;
+      padding-bottom: 0rem;
 
       &:before, &:after {
         display: none;
