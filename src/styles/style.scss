@@ -62,8 +62,11 @@ ul, ol {
   font-size: 2.5rem;
 }
 
-#details-pane, #history-pane {
+#details-pane {
   overflow: auto;
+}
+#history-pane {
+  overflow: hidden;
 }
 
 #details-pane {
