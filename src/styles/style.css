@@ -1,6 +1,50 @@
-@import 'modules/base';
-@import 'modules/svg';
+@import 'variables';
+:root {
+	--primaryFont: 'Roboto', sans-serif;
+	--primaryColor: #000;
+	--mutedColor: #ccc;
 
+	--linkBoxColor: #3f6bce;
+	--linkBoxHoverBackgroundColor: #000;
+	--detailsBackgroundColor: #080808;
+	--historyBackgroundColor: #ebebeb;
+
+	--obLightestBlue: #86AAD2;
+	--obLightBlue: #0d56a6;
+	--obDarkBlue: #100DA5;
+
+	--blockMargin: 2rem;
+	--spaceship: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%237f7f7f;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EArtboard 1%3C/title%3E%3Cpath class='cls-1' d='M1.3,1.23h0L14.76,5.9a.1.1,0,0,1,0,.19L1.33,10.77h0a.13.13,0,0,1-.09-.2L4.87,6.14a.3.3,0,0,0,0-.4L1.21,1.43a.12.12,0,0,1,.09-.2M1.3,0h0A1.29,1.29,0,0,0,.12.8,1.41,1.41,0,0,0,.33,2.25L3.48,6,.31,9.77a1.39,1.39,0,0,0-.19,1.44A1.29,1.29,0,0,0,1.29,12a1.41,1.41,0,0,0,.41-.07L15.13,7.26a1.35,1.35,0,0,0,0-2.52L1.71.07A1.41,1.41,0,0,0,1.3,0Z'/%3E%3C/svg%3E");
+	--spaceshipShot: url("data:image/svg+xml,%3Csvg data-name='Layer 1' version='1.1' viewBox='0 0 25 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%237f7f7f;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EArtboard 1%3C/title%3E%3Cpath class='cls-1' d='m1.1096 3.6318h14.247c0.29784-0.30338 0.70606-0.66727-0.03844-1.3079h-14.209c-1.0203 0.54441-0.42938 1.0187 7.33e-4 1.3079z' fill='%237f7f7f'/%3E%3C/svg%3E%0A");
+}
+/* Normalize */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  background-color: var(--historyBackgroundColor);
+  box-sizing: border-box;
+  color: var(--primaryColor);
+  font-family: var(--primaryFont);
+  font-size: 1.0em;
+  line-height: 2em;
+}
+
+a {
+  transition: all .20s linear;
+
+  &:link {
+    text-decoration: none;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  clear: left;
+}
+/* End Normalize */
 
 .print-only {
   display: none;
@@ -70,14 +114,14 @@ ul, ol {
 }
 
 #details-pane {
-  background-color: $detailsBackgroundColor;
+  background-color: var(--detailsBackgroundColor);
   color: #fff;
   font-family: 'Nanum Gothic Coding', monospace;
   letter-spacing: 0.1em;
 
   .wrapper {
     float: right;
-    padding: $blockMargin;
+    padding: var(--blockMargin);
   }
     .details {
       display: flex;
@@ -88,7 +132,7 @@ ul, ol {
     &:link,
     &:visited {
       -webkit-tap-highlight-color: #fff;
-      color: $obLightestBlue;
+      color: var(--obLightestBlue);
     }
 
     &:hover,
@@ -116,7 +160,7 @@ ul, ol {
   }
 
   dd, .skills {
-    color: $mutedColor;
+    color: var(--mutedColor);
   }
 
   .contact,
@@ -126,7 +170,7 @@ ul, ol {
 }
 
 #history-pane {
-  margin: $blockMargin;
+  margin: var(--blockMargin);
   text-shadow: 0px 1px 0px #fff;
 
   .name,
@@ -157,7 +201,7 @@ ul, ol {
     }
 
     a {
-      background-color: $obLightBlue;
+      background-color: var(--obLightBlue);
       border-radius: 4px;
       color: #fff;
       display: inline-block;
@@ -169,7 +213,7 @@ ul, ol {
 
       &:hover,
       &:active {
-        background-color: $linkBoxHoverBackgroundColor;
+        background-color: var(--linkBoxHoverBackgroundColor);
       }
     }
   }
@@ -216,14 +260,14 @@ ul, ol {
     }
 
     &:before {
-      background-image: $spaceshipShot;
+      background-image: var(--spaceshipShot);
       background-repeat: repeat-x;
       bottom: 0;
       left: 1.8rem;
     }
 
     &:after {
-      background-image: $spaceship;
+      background-image: var(--spaceship);
       background-repeat: no-repeat;
       bottom: 0.25rem;
       left: 0;
@@ -232,7 +276,7 @@ ul, ol {
 }
 
 
-@media screen and (max-device-width: 499px) {
+@media screen and (max-width: 499px) {
   #history-pane {
     .technologies, .duties {
       h3 {
@@ -243,7 +287,7 @@ ul, ol {
     }
   }
 }
-@media screen and (min-device-width: 500px), print {
+@media screen and (min-width: 500px), print {
   html {
     line-height: 2.25em;
   }
@@ -264,13 +308,13 @@ ul, ol {
   }
 }
 
-@media screen and (max-device-width: 779px) {
+@media screen and (max-width: 779px) {
   body {
     display: flex;
     flex-direction: column-reverse;
   }
 }
-@media screen and (min-device-width: 780px) {
+@media screen and (min-width: 780px) {
   body {
     display: grid;
     grid-template-columns: 3fr 7fr;
@@ -297,14 +341,14 @@ ul, ol {
   }
 }
 
-@media screen and (max-device-width: 900px) {
+@media screen and (max-width: 900px) {
   #history-pane {
     .timeframe {
       float: none;
     }
   }
 }
-@media screen and (min-device-width: 781px) and (max-device-width: 1200px) {
+@media screen and (min-width: 781px) and (max-width: 1200px) {
   #details-pane {
     .contact {
       display: block;
@@ -316,14 +360,14 @@ ul, ol {
   }
 }
 
-@media screen and (min-device-width: 1280px) {
+@media screen and (min-width: 1280px) {
   #details-pane {
     .wrapper {
-      padding: calc(2 * #{$blockMargin});
+      padding: calc(2 * var(--blockMargin));
     }
   }
   #history-pane {
-    margin: calc(2 * #{$blockMargin});
+    margin: calc(2 * var(--blockMargin));
   }
 }
 
